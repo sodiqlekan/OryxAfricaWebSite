@@ -12,9 +12,10 @@ using OryxCore.Data;
 namespace OryxCore.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180725130415_mold")]
+    partial class mold
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -221,11 +222,7 @@ namespace OryxCore.Data.Migrations
 
                     b.Property<string>("Details");
 
-                    b.Property<byte[]>("Image");
-
-                    b.Property<string>("ImageContentType");
-
-                    b.Property<string>("ImageSourceFileName");
+                    b.Property<string>("ImageName");
 
                     b.Property<string>("Name");
 
